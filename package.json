@@ -9,6 +9,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "node --watch index.js",
+    "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:ui": "rm -rf dist && cd ../frontend && npm run build && cp -r dist../backend",
     "deploy:full": "npm run build:ui && git add . && git commit -m ui build && git push"
@@ -17,5 +18,12 @@
     "express": "^5.2.1",
     "mongodb": "^7.7.0",
     "mongoose": "^9.11.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0",
+    "typescript-eslint": "^8.71.2"
   }
 }
